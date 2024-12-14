@@ -1,0 +1,927 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header-container {
+    position: relative;
+}
+
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.header-top .address {
+    margin-right: auto;
+    text-align: left;
+}
+
+.header-top .reserve {
+    margin-left: auto;
+    text-align: right;
+}
+
+.header-top .logo {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header-top.hidden {
+    transform: translateY(-100%);
+}
+
+.logo-img {
+    max-height: 120px;
+}
+
+.address, .reserve {
+    font-size: 0.9rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1010;
+    transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #252525;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    top: 0;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: gold !important;
+}
+
+.carousel {
+    height: 950px;
+}
+
+.carousel-inner {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+}
+
+.btn {
+    margin-top: 20px;
+    color: white;
+    background: transparent;
+    border: 3px solid white;
+    font-weight: bold;
+}
+
+/*carrusel*/
+
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.especificaciones {
+    background-color: #f3f3f3;
+    padding: 60px 0;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    margin-right: 20px;
+    max-width: 80px;
+}
+
+.text-content h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-us-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-section .section-title {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.about-us-section .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.about-us-section .about-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.about-us-section .about-text,
+.about-us-section .additional-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-us-section .additional-text {
+    font-size: 0.875rem;
+}
+
+.about-us-section .btn-saber-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    border: 4px solid #000;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-us-section .btn-saber-mas:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.about-us-section .image-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.about-us-section .about-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px 0 0 #000;
+}
+
+/*about us*/
+
+.parallax-1 {
+    position: relative;
+    background-image: url('images/pollo_parallax.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    padding: 0;
+    height: 500px;
+    text-align: center;
+}
+
+.parallax-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-img {
+    max-width: 80%;
+    height: auto;
+}
+
+.mejor-pollo-section {
+    background-color: rgba(202, 183, 183, 0.781);
+    padding: 60px 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mejor-pollo-section .section-title {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.mejor-pollo-section .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.mejor-pollo-section .about-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.mejor-pollo-section .about-text,
+.mejor-pollo-section .additional-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 80%;
+    max-height: 80%;
+}
+
+.mejor-pollo-img {
+    max-width: 80%;
+    height: 80%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0 0 #000;
+}
+
+.parallax-2 {
+    background-image: url('images/Menu/parallax2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.parallax-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-hours {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.btn-reserva-ahora {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f3f3f3;
+    border: 4px solid #f8f8f8;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-reserva-ahora:hover {
+    background-color: #111010;
+    color: #ffffff;
+}
+
+/*Parallax 2*/
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.social-media {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ccc;
+}
+
+.menu-hero {
+    position: relative;
+    background-image: url('images/menu.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.menu-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.menu-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.menu-title {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.menu-subtitle {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.menu-content {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+
+.card {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    background-color: #f8f9fa;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-header .btn-link {
+    color: #000000;
+    font-size: 1.25rem;
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-header .btn-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        }
+    
+    .menu-item {
+        border-bottom: 1px solid #ddd; 
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border: 1px solid transparent; 
+    }
+    
+    .menu-item:hover {
+        border: 1px solid #000; 
+        background-color: #f8f8f8; 
+    }
+    
+    .menu-item-image img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; 
+        object-fit: cover;
+    }
+    
+    .menu-item-info {
+        flex-grow: 1;
+        margin-left: 15px;
+    }
+    
+    .menu-item-title {
+        font-size: 1.25rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .dots {
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    .menu-item-price {
+        font-weight: bold;
+    }
+    
+    .menu-item-ingredients {
+        margin: 5px 0 0;
+        font-size: 0.875rem;
+        color: #555;
+    }
+    
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .video-container iframe {
+        width: 100%;
+        height: 315px;
+        border: 0;
+    }
+    .form-check {
+        margin-bottom: 10px;
+    }
+    .form-check-label {
+        margin-right: 20px;
+    }
+    .reservation-form {
+        margin-top: 30px;
+    }
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .address, .reserve {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        background: #252525;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .navbar-toggler {
+        display: block;
+        background: #252525;
+        border: none;
+        color: white;
+    }
+    
+    .navbar-collapse {
+        display: none;
+    }
+    
+    .navbar-collapse.collapse.show {
+        display: block !important;
+    }
+    
+    .navbar-collapse.show {
+        display: block !important;
+    }
+
+    .about-us-section {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    .about-us-section .col-lg-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-us-section .about-title {
+        font-size: 2rem;
+    }
+
+    .about-us-section .history-title {
+        font-size: 0.875rem;
+    }
+
+    .about-us-section .about-text,
+    .about-us-section .additional-text {
+        font-size: 0.875rem;
+    }
+
+    .about-us-section .text-content,
+    .mejor-pollo-section .text-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .spec-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .text-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .text-content p {
+        font-size: 0.875rem;
+    }
+
+    .icon {
+        max-width: 40px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-content img {
+        max-width: 80%;
+    }
+
+    .especificaciones {
+        background-color: #f3f3f3;
+        padding: 60px 0;
+    }
+    
+    .spec-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .icon {
+        margin-right: 20px;
+        max-width: 80px;
+    }
+    
+    .text-content h3 {
+        font-size: 1.5rem;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .mejor-pollo-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mejor-pollo-section .section-title,
+    .mejor-pollo-section .about-title {
+        text-align: center;
+    }
+
+    .mejor-pollo-section .about-title {
+        font-size: 2rem;
+    }
+
+    .mejor-pollo-section .about-text,
+    .mejor-pollo-section .additional-text {
+        text-align: center;
+        font-size: 0.875rem;
+    }
+
+    .image-wrapper {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mejor-pollo-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+    .footer-text {
+        font-size: 0.875rem;
+    }
+
+    .social-icon {
+        font-size: 1.25rem;
+        margin: 0 8px;
+    }
+
+    .menu-hero {
+        height: 400px; 
+    }
+
+    .menu-title {
+        font-size: 2.5rem; 
+    }
+
+    .menu-subtitle {
+        font-size: 1.25rem; 
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .menu-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+        text-align: left; 
+    }
+
+    .menu-item-image img {
+        width: 60px; 
+        height: 60px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .logo-img {
+        max-height: 80px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.875rem;
+    }
+
+    .about-us-section .section-title {
+        font-size: 1.25rem;
+    }
+
+    .about-us-section .about-title {
+        font-size: 2rem;
+    }
+
+    .about-us-section .about-text,
+    .about-us-section .additional-text {
+        font-size: 0.875rem;
+    }
+
+    .about-us-section .btn-saber-mas {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+
+    .spec-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon {
+        max-width: 60px;
+    }
+
+    .text-content h3 {
+        font-size: 1rem;
+    }
+
+    .text-content p {
+        font-size: 0.75rem;
+    }
+
+    .mejor-pollo-section .about-title {
+        font-size: 1.5rem;
+    }
+
+    .mejor-pollo-section .about-text,
+    .mejor-pollo-section .additional-text {
+        font-size: 0.75rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.75rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+}
